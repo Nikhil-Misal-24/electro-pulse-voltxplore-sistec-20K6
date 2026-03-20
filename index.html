@@ -119,6 +119,7 @@
         .tagline { font-size: 1.2rem; letter-spacing: 4px; color: var(--tech-blue); margin-top: 10px; text-transform: uppercase; }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 50px 20px; }
+        
 
         .info-grid {
             display: grid;
@@ -263,6 +264,92 @@
             border: 5px solid #fff;
             border-radius: 10px;
         }
+
+       /* registration-section-Output */
+.custom-modal {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    
+   
+    background: rgba(0, 0, 0, 0.4); 
+    
+  
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+ 
+    background: rgba(18, 18, 18, 0.95);
+    padding: 30px;
+    border: 2px solid #39ff14; /* Neon Green */
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    max-width: 420px;
+    width: 90%; 
+    
+    
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.4);
+    
+    
+    animation: popUpAnim 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popUpAnim {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.group-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    border: 1px dashed #39ff14;
+}
+
+.wa-link {
+    color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: 1px solid #25D366;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.wa-link:hover {
+    background: #25D366;
+    color: black;
+    box-shadow: 0 0 10px #25D366;
+}
+
+.close-btn {
+    background: #39ff14;
+    color: black;
+    border: none;
+    padding: 12px 35px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(57, 255, 20, 0.4);
+}
+
     </style>
 </head>
 <body>
@@ -308,7 +395,7 @@
             <div class="prize-box" data-aos="flip-left"><p>1st PRIZE</p><span>₹ 2500</span></div>
             <div class="prize-box" data-aos="flip-right"><p>2nd PRIZE</p><span>₹ 1500</span></div>
         </div>
-        <p style="margin-top: 30px; font-size: 1.2rem;">Entry Fees: <b style="color: var(--neon-green);">₹ 200 per team</b></p>
+        <p style="margin-top: 30px; font-size: 1.2rem;">Entry Fee: <b style="color: var(--neon-green);">₹ 200 per team</b></p>
     </section>
 
     <section class="rounds-section">
@@ -316,8 +403,8 @@
             <h2 class="accent-font" data-aos="fade-down" style="text-align: center; color: var(--tech-blue); margin-bottom: 50px;">GAME STRUCTURE</h2>
             
             <div class="round-card" data-aos="fade-right">
-                <h3>Round 1: Visual Instinct (Identify & Ignite)</h3>
-                <p>This high-speed preliminary round tests your ability to recognize the building blocks of electronics. Participants must identify components from macro-photography, distinct hardware sounds, or short technical clips.</p>
+                <h3>Round 1: Identify & Ignite</h3>
+                <p>This high-speed preliminary round tests your ability to recognize the building blocks of electronics. Participants must identify components from Photography, distinct hardware sounds, or short technical clips.</p>
                 <ul class="round-rules">
                     <li>Responses must be submitted within the allotted 20-second window per slide.</li>
                     <li>Points are awarded based on both accuracy and response time.</li>
@@ -327,7 +414,7 @@
             </div>
 
             <div class="round-card" data-aos="fade-left">
-                <h3>Round 2: The Tech-Trail (Technical Hunt)</h3>
+                <h3>Round 2: Technical Hunt</h3>
                 <p>A department-wide scavenger hunt that merges logic with navigation. Teams must decode technical riddles to locate specific laboratory equipment or hidden "flags" within the ECE wing.</p>
                 <ul class="round-rules">
                     <li>Each team starts with a primary clue; subsequent clues are earned only after solving a technical puzzle at each station.</li>
@@ -338,10 +425,10 @@
             </div>
 
             <div class="round-card" data-aos="fade-right">
-                <h3>Round 3: The Debugging Challenge (Circuit Conquest)</h3>
+                <h3>Round 3: Circuit Conquest</h3>
                 <p>The ultimate test of practical troubleshooting. Teams are presented with a malfunctioning circuit containing intentional errors—such as incorrect polarities, dry solders, or misplaced connections—and must restore full functionality.</p>
                 <ul class="round-rules">
-                    <li>All necessary diagnostic tools (Multimeters, breadboards, and basic components) will be provided.</li>
+                    <li>All necessary diagnostic tools (Multimeters, Breadboards, and basic components) will be provided.</li>
                     <li>No external schematics or mobile data usage is allowed during the debugging process.</li>
                     <li>Winning Criteria: The first team to achieve the verified output will be declared the champion.</li>
                     <li>In the event of a tie, the team that used the fewest replacement components will win.</li>
@@ -383,7 +470,7 @@
                 <hr style="border: 0.1px solid rgba(255,255,255,0.1); margin: 10px 0;">
                 <div>
                     <p>Ms. Richa Datt Pradhan</p>
-                    <a href="tel:7869511505" class="phone">+91 7869511505</a>
+                    <a href="tel:7869511505" class="phone">+91 78695 11505</a>
                 </div>
             </div>
         </div>
@@ -396,33 +483,51 @@
             <div class="form-container">
                 <div class="qr-section">
                     <p style="color: var(--tech-blue); font-weight: bold;">SCAN TO PAY (₹200)</p>
-                    <img src="QR.png" alt="Payment QR Code" class="qr-image"> <p style="font-size: 0.8rem; color: #ccc;">Scan the QR code and enter the Transaction ID below.</p>
+                    <img src="QR.png" alt="Payment QR Code" class="qr-image"> <p style="font-size: 0.8rem; color: #ccc;"> Scan the QR code and enter the Transaction ID below.</p>
+                    
                 </div>
 
-                <form action="https://formspree.io/f/xkoqbobq" method="POST">
-                    <br>
-                    <p style="color: var(--neon-green);">Team Leader Details</p>
-                    <br>
-                    <div class="form-group"><label>Team Lead Name</label><input type="text" name="Lead_Name" required placeholder="Enter Your Full Name"></div>
-                    <div class="form-group"><label>Enrollment Number</label><input type="text" name="Roll_No" required placeholder="Enter Your Enrollment No."></div>
-                    <div class="form-group"><label>WhatsApp Number</label><input type="tel" name="Contact" required placeholder="Enter Your Contect No."></div>
-                    <div class="form-group"><label>Collage Name</label><input type="text" name="Collage_Name" required placeholder="Enter Your Collage Name"></div>
-                    
-                    <br>
-                    <p style="color: var(--neon-green);">Team Member Details</p>
-                    <br>
-                    <div class="form-group"><label>Team Member Name</label><input type="text" name="Member_2" placeholder="Enter Your Full Name (Optional)"></div>
-                    <div class="form-group"><label>Enrollment Number</label><input type="text" name="Roll_No_Member" placeholder="Enter Member Enrollment No."></div>
-                    <div class="form-group"><label>WhatsApp Number</label><input type="tel" name="Contact_Member" placeholder="Enter Member Contact No."></div>
-                    <div class="form-group"><label>Collage Name</label><input type="text" name="Collage_Name_Member" placeholder="Enter Member Collage Name"></div>
-                    
-                    <br>
-                    <p style="color: var(--neon-green);">Payment Verification</p>
-                    <br>
-                    <div class="form-group"><label>Transaction ID / UTR No.</label><input type="text" name="Transaction_ID" required placeholder="Enter 12 Digit ID after Payment"></div>
+                <form id="registration"> <br>
+    <p style="color: var(--neon-green);">Team Leader Details</p>
+    <br>
+    <div class="form-group"><label>Team Lead Name</label><input type="text" name="teamLeadName" required placeholder="Enter Your Full Name"></div>
+    <div class="form-group"><label>Enrollment Number</label><input type="text" name="enrollment1"  required placeholder="Enter Your Enrollment No."></div>
+    <div class="form-group"><label>Email Address</label><input type="email" name="email1"  required placeholder= "Enter Your Email Address"></div>
+    <div class="form-group"><label>WhatsApp Number</label><input type="tel" name="whatsapp1"  required placeholder="Enter Your Contect No."></div>
+    <div class="form-group"><label>College Name</label><input type="text" name="college1" required placeholder="Enter Your Collage Name"></div>
+    
+    <br>
+    <p style="color: var(--neon-green);">Team Member Details</p>
+    <br>
+    <div class="form-group"><label>Team Member Name</label><input type="text" name="memberName" required placeholder="Enter Your Full Name"></div>
+    <div class="form-group"><label>Enrollment Number</label><input type="text" name="enrollment2"required placeholder="Enter Your Enrollment No."></div>
+    <div class="form-group"><label>Email Address</label><input type="email" name="email2" required placeholder= "Enter Your Email Address"></div>
+    <div class="form-group"><label>WhatsApp Number</label><input type="tel" name="whatsapp2" required placeholder="Enter Your Contect No."></div>
+    <div class="form-group"><label>College Name</label><input type="text" name="college2" required placeholder="Enter Your Collage Name"></div>
+    
+    <br>
+    <p style="color: var(--neon-green);">Payment Verification</p>
+    <br>
+    <div class="form-group"><label>Transaction ID / UTR No.</label><input type="text" name="transactionID" required placeholder="Enter 12 Digit ID after Payment"></div>
 
-                    <button type="submit" class="btn-submit">SUBMIT REGISTRATION</button>
-                </form>
+    <button type="submit" class="btn-submit">SUBMIT REGISTRATION</button>
+</form>
+
+<div id="successModal" class="custom-modal">
+    <div class="modal-content">
+        <h2 style="color: #39ff14;">⚡CIRCUIT COMPLETED!⚡</h2>
+        <p>Registration Successful!<br>Your signal has been received and processed.</p>
+        <p>Get ready to explore the power of electronics at <b>VoltXplore</b>.</p>
+        
+        <div class="group-box">
+            <span>Join Official WhatsApp Group:</span><br>
+            <a href="https://chat.whatsapp.com/BCiMHFGOXf14XYITbYJlfe" target="_blank" class="wa-link">Click Here to Join Group</a>
+        </div>
+        
+        <p><i>Let's see if you have the Pulsating Spark!</i></p>
+        <button onclick="closeModal()" class="close-btn">DONE</button>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -438,10 +543,51 @@
             <span>@electropulse_sistec_gn</span>
         </a>
 
-        <p style="font-size: 11px; margin-top: 20px;"> © 2026 | Designed & Developed by Digital & IT Team, <strong>Electro Pulse</strong>.</p>
+        <p style="font-size: 11px; margin-top: 20px;">© 2026 | Designed & Developed by Digital & IT Team, <strong> Electropulse</strong>.</b></p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 1000, once: false });</script>
 </body>
+
+
+<script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbywwLR0F1wxlxdJ_NqMUTZyG_Ac32Z7NFoMrQnlYRi2BwfzbUboh8AfY6q_IXZ8aq9dEw/exec'; 
+const form = document.querySelector('#registration'); 
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  
+  const submitButton = form.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.innerText = "Submitting...";
+
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        // .then(response => 
+document.getElementById('successModal').style.display = 'flex';
+
+
+function closeModal() {
+    document.getElementById('successModal').style.display = 'none';
+}
+        form.reset();
+        submitButton.disabled = false;
+        submitButton.innerText = "Register Now";
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        alert("Something went wrong. Please try again.");
+        submitButton.disabled = false;
+        submitButton.innerText = "Register Now";
+    });
+});
+
+function closeModal() {
+    const modal = document.getElementById('successModal');
+    modal.style.display = 'none';
+}
+    </script>
+</body>
+</html>
 </html>
